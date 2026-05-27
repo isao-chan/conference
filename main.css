@@ -1,0 +1,28 @@
+body {
+  line-height: 1.8;
+  font-family: sans-serif;
+}
+
+/* 見出し */
+p {
+  margin-top: 24px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* リンク */
+a {
+  display: block;
+  margin-bottom: 6px;
+  /* text-decoration: none; */
+  /* color: #333; */
+}
+
+/* 字下げしたい部分だけ */
+.indent {
+  margin-left: 1.5em;
+}
+
+a:hover {
+  text-decoration: underline;
+}
