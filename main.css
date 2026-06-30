@@ -13,7 +13,7 @@ p {
 /* リンク */
 a {
   display: block;
-  margin-bottom: 6px;
+  /* margin-bottom: 6px; */
   /* text-decoration: none; */
   /* color: #333; */
 }
@@ -21,6 +21,11 @@ a {
 /* 字下げしたい部分だけ */
 .indent {
   margin-left: 1.5em;
+}
+
+.book-link {
+  margin-left: 3em;
+  margin-bottom: 30px;
 }
 
 a:hover {
