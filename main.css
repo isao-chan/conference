@@ -31,3 +31,305 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+/* 読書関連サンプル */
+body.reading-sample {
+            --ink: #25302b;
+            --muted: #66716c;
+            --paper: #fbfaf6;
+            --panel: #ffffff;
+            --accent: #356859;
+            --accent-light: #e4efe9;
+            --line: #dce3df;
+        }
+
+        body.reading-sample, body.reading-sample * { box-sizing: border-box; }
+
+        body.reading-sample {
+            margin: 0;
+            color: var(--ink);
+            background: var(--paper);
+            font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+            line-height: 1.7;
+        }
+
+        body.reading-sample main {
+            width: min(1040px, calc(100% - 40px));
+            margin: 0 auto;
+            padding: 64px 0 80px;
+        }
+
+        body.reading-sample h1, body.reading-sample h2, body.reading-sample h3, body.reading-sample h4, body.reading-sample p { margin-top: 0; }
+
+        body.reading-sample .site-header {
+            margin-bottom: 64px;
+        }
+
+        body.reading-sample .resource-heading {
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--line);
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            line-height: 1.25;
+        }
+
+        body.reading-sample .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 16px;
+            margin-bottom: 56px;
+        }
+
+        body.reading-sample .resource-card {
+            display: block;
+            color: var(--ink);
+            font-weight: 700;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        body.reading-sample .resource-placeholder {
+            display: grid;
+            place-items: center;
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            margin-bottom: 10px;
+            border: 1px solid rgba(37, 48, 43, 0.12);
+            border-radius: 12px;
+            color: rgba(255, 255, 255, 0.92);
+            background: #6f8f83;
+            box-shadow: 0 8px 20px rgba(38, 58, 49, 0.08);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        body.reading-sample .resource-card:hover .resource-placeholder {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(38, 58, 49, 0.14);
+        }
+
+        body.reading-sample .resource-card.diary .resource-placeholder { background: #987264; }
+        body.reading-sample .resource-card.notebook .resource-placeholder { background: #627993; }
+        body.reading-sample .resource-card.attendance .resource-placeholder { background: #82758f; }
+
+        body.reading-sample .page-header {
+            margin-bottom: 56px;
+        }
+
+        body.reading-sample .eyebrow {
+            margin-bottom: 8px;
+            color: var(--accent);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+        }
+
+        body.reading-sample h1, body.reading-sample .page-header h2 {
+            margin-bottom: 12px;
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            line-height: 1.25;
+        }
+
+        body.reading-sample .lead {
+            max-width: 680px;
+            margin-bottom: 0;
+            color: var(--muted);
+        }
+
+        body.reading-sample section + section { margin-top: 72px; }
+
+        body.reading-sample .section-heading {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 24px;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        body.reading-sample .section-heading h3 {
+            margin-bottom: 12px;
+            font-size: 1.55rem;
+        }
+
+        body.reading-sample .section-heading p {
+            margin-bottom: 12px;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        body.reading-sample .essay-card {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 36px;
+            padding: 32px;
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            background: var(--panel);
+            box-shadow: 0 12px 32px rgba(38, 58, 49, 0.07);
+        }
+
+        body.reading-sample .essay-card + .essay-card {
+            margin-top: 24px;
+        }
+
+        body.reading-sample .cover {
+            display: grid;
+            place-items: center;
+            width: 100%;
+            aspect-ratio: 2 / 3;
+            padding: 18px;
+            border-radius: 5px 10px 10px 5px;
+            color: #fff;
+            background: linear-gradient(145deg, #334e46, #739486);
+            box-shadow: 5px 8px 16px rgba(31, 47, 40, 0.2);
+            text-align: center;
+            font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            line-height: 1.5;
+        }
+
+        body.reading-sample .water-cover {
+            background: linear-gradient(145deg, #416d7d, #82a9b5);
+        }
+
+        body.reading-sample .essay-content {
+            align-self: center;
+        }
+
+        body.reading-sample .label {
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 3px 10px;
+            border-radius: 999px;
+            color: var(--accent);
+            background: var(--accent-light);
+            font-size: 0.78rem;
+            font-weight: 700;
+        }
+
+        body.reading-sample .essay-content h4 {
+            margin-bottom: 10px;
+            font-size: 1.45rem;
+        }
+
+        body.reading-sample .description {
+            margin-bottom: 22px;
+            color: var(--muted);
+        }
+
+        body.reading-sample .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        body.reading-sample .button {
+            display: inline-block;
+            padding: 10px 18px;
+            border: 1px solid var(--accent);
+            border-radius: 8px;
+            color: var(--accent);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        body.reading-sample .button.primary {
+            color: #fff;
+            background: var(--accent);
+        }
+
+        .button:hover { opacity: 0.82; }
+
+        body.reading-sample .notes-intro {
+            max-width: 720px;
+            margin: -8px 0 24px;
+            color: var(--muted);
+        }
+
+        body.reading-sample .notes-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        body.reading-sample .note-card {
+            display: grid;
+            grid-template-columns: 72px 1fr;
+            gap: 16px;
+            align-items: center;
+            min-height: 150px;
+            padding: 18px;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            background: var(--panel);
+        }
+
+        body.reading-sample .mini-cover {
+            display: grid;
+            place-items: center;
+            width: 72px;
+            aspect-ratio: 2 / 3;
+            padding: 7px;
+            border-radius: 3px 6px 6px 3px;
+            color: #fff;
+            background: var(--cover-color, #667c74);
+            text-align: center;
+            font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            line-height: 1.35;
+        }
+
+        body.reading-sample .note-card h4 {
+            margin-bottom: 8px;
+            font-size: 0.98rem;
+            line-height: 1.5;
+        }
+
+        body.reading-sample .text-links {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 3px;
+        }
+
+        body.reading-sample .text-links a {
+            color: var(--accent);
+            font-size: 0.86rem;
+            text-underline-offset: 3px;
+        }
+
+        @media (max-width: 800px) {
+            body.reading-sample .resource-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            body.reading-sample .notes-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+
+        @media (max-width: 560px) {
+            body.reading-sample main {
+                width: min(100% - 28px, 1040px);
+                padding-top: 40px;
+            }
+
+            body.reading-sample .page-header { margin-bottom: 40px; }
+            body.reading-sample .resource-grid { gap: 18px 12px; margin-bottom: 44px; }
+            body.reading-sample section + section { margin-top: 56px; }
+
+            body.reading-sample .section-heading {
+                display: block;
+            }
+
+            body.reading-sample .essay-card {
+                grid-template-columns: 110px 1fr;
+                gap: 20px;
+                padding: 20px;
+            }
+
+            body.reading-sample .cover { font-size: 0.9rem; }
+            body.reading-sample .essay-content h4 { font-size: 1.15rem; }
+            body.reading-sample .description { display: none; }
+            body.reading-sample .actions { display: grid; }
+            body.reading-sample .button { text-align: center; }
+            body.reading-sample .notes-grid { grid-template-columns: 1fr; }
+        }
