@@ -288,6 +288,17 @@ body.reading-sample {
             line-height: 1.5;
         }
 
+        body.reading-sample .note-status {
+            display: inline-block;
+            margin-bottom: 4px;
+            padding: 1px 7px;
+            border-radius: 999px;
+            color: var(--accent);
+            background: var(--accent-light);
+            font-size: 0.7rem;
+            font-weight: 700;
+        }
+
         body.reading-sample .text-links {
             display: flex;
             flex-direction: column;
